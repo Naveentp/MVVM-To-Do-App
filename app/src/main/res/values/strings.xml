@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">To-Do</string>
+    <string name="delete">delete</string>
+    <string name="save">Save</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_content">Enter Content</string>
+    <string name="pleaseEnterTitle">Please enter title</string>
+    <string name="pleaseEnterContent">Please enter content</string>
+    <string name="viewOrEditTodo">View/Edit Todo</string>
+    <string name="createTodo">Create Todo</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+</resources>

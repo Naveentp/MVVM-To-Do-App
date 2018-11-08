@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.naveentp.todo"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Kotlin
+    implementation kotlinLibraries.kotlin
+    implementation kotlinLibraries.coroutines
+
+    //Support
+    implementation supportLibraries.appCompat
+    implementation supportLibraries.cardView
+    implementation supportLibraries.recyclerView
+    implementation supportLibraries.material
+
+    //ViewModel & LiveData
+    implementation archLibraries.lifecycle
+    kapt archLibraries.lifecycleCompiler
+
+    //Room
+    implementation archLibraries.room
+    kapt archLibraries.roomCompiler
+
+    testImplementation testLibraries.junit
+    androidTestImplementation testLibraries.testRunner
+    androidTestImplementation testLibraries.espresso
+}
