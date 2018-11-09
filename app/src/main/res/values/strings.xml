@@ -10,4 +10,6 @@
     <string name="createTodo">Create Todo</string>
     <string name="title">Title</string>
     <string name="content">Content</string>
+    <string name="search">Search</string>
+    <string name="search_here">Search here</string>
 </resources>
