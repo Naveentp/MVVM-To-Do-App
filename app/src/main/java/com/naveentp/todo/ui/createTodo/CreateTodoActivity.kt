@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_create_todo.*
  */
 class CreateTodoActivity : AppCompatActivity() {
 
-    var todoRecord: TodoRecord? = null
+    private var todoRecord: TodoRecord? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

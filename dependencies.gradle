@@ -9,6 +9,7 @@ ext {
     materialVersion = '1.0.0-alpha1'
     lifecycleVersion = "2.0.0"
     roomVersion = "2.0.0"
+    koinVersion = '1.0.0'
 
     // Testing
     jUnitVersion = '4.12'
@@ -19,6 +20,12 @@ ext {
     kotlinLibraries = [
             kotlin    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
             coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    ]
+
+    koinLibraries = [
+            koinCore     : "org.koin:koin-android:$koinVersion",
+            koinViewModel: "org.koin:koin-android-viewmodel:$koinVersion",
+            koinScope    : "org.koin:koin-android-scope:$koinVersion"
     ]
 
     // Support Libraries

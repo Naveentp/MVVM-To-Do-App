@@ -1,34 +1,30 @@
 package com.naveentp.todo.ui.todoList
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.naveentp.todo.data.TodoRepository
+import androidx.lifecycle.ViewModel
 import com.naveentp.todo.data.db.TodoRecord
+import com.naveentp.todo.data.repo.TodoRepo
 
 /**
  * @author Naveen T P
  * @since 08/11/18
  */
-class TodoViewModel(application: Application) : AndroidViewModel(application) {
-
-    private val repository: TodoRepository = TodoRepository(application)
-    private val allTodoList: LiveData<List<TodoRecord>> = repository.getAllTodoList()
+class TodoViewModel(private val todoRepo: TodoRepo) : ViewModel() {
 
     fun saveTodo(todo: TodoRecord) {
-        repository.saveTodo(todo)
+        todoRepo.saveTodo(todo)
     }
 
     fun updateTodo(todo: TodoRecord){
-        repository.updateTodo(todo)
+        todoRepo.updateTodo(todo)
     }
 
     fun deleteTodo(todo: TodoRecord) {
-        repository.deleteTodo(todo)
+        todoRepo.deleteTodo(todo)
     }
 
     fun getAllTodoList(): LiveData<List<TodoRecord>> {
-        return allTodoList
+        return todoRepo.getAllTodoList()
     }
 
 }

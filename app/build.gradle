@@ -49,6 +49,11 @@ dependencies {
     implementation archLibraries.room
     kapt archLibraries.roomCompiler
 
+    //Koin
+    implementation koinLibraries.koinCore
+    implementation koinLibraries.koinViewModel
+    implementation koinLibraries.koinScope
+
     testImplementation testLibraries.junit
     androidTestImplementation testLibraries.testRunner
     androidTestImplementation testLibraries.espresso

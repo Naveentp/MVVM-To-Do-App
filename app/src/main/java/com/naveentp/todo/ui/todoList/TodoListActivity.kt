@@ -10,7 +10,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.naveentp.todo.R
 import com.naveentp.todo.data.db.TodoRecord
@@ -18,10 +17,13 @@ import com.naveentp.todo.ui.createTodo.CreateTodoActivity
 import com.naveentp.todo.utils.Constants
 import kotlinx.android.synthetic.main.activity_todo_list.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class TodoListActivity : AppCompatActivity(), TodoListAdapter.TodoEvents {
 
-    private lateinit var todoViewModel: TodoViewModel
+    //Koin provides TodoViewModel dependency
+    private val todoViewModel: TodoViewModel by viewModel()
+
     private lateinit var searchView: SearchView
     private lateinit var todoAdapter: TodoListAdapter
 
@@ -35,8 +37,7 @@ class TodoListActivity : AppCompatActivity(), TodoListAdapter.TodoEvents {
         rv_todo_list.adapter = todoAdapter
 
 
-        //Setting up ViewModel and LiveData
-        todoViewModel = ViewModelProviders.of(this).get(TodoViewModel::class.java)
+        //Setting up LiveData
         todoViewModel.getAllTodoList().observe(this, Observer {
             todoAdapter.setAllTodoItems(it)
         })
