@@ -15,4 +15,4 @@ A To-Do application written in kotlin using Android Architectural components
 - View/Update Todo
 - Search Todo list
 
-Koin Integration - A new branch [Koin in Action](https://github.com/Naveentp/MVVM-To-Do-App/tree/koin_in_action) created to demonstrate Koin dependency injection.
+**Koin Integration** - A new branch [Koin in Action](https://github.com/Naveentp/MVVM-To-Do-App/tree/koin_in_action) created to demonstrate [Koin](https://insert-koin.io/) dependency injection.
