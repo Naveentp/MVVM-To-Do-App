@@ -1,7 +1,8 @@
 # MVVM-To-Do-App
 > A To-Do application written in kotlin using Android Architectural components
 
-**What's new?**  
+**What's new?**
+**Room + Coroutines** - Upgraded Room to v2.1. Room's DAO methods can now be suspend functions.
 **Koin Integration** - A new branch [Koin in Action](https://github.com/Naveentp/MVVM-To-Do-App/tree/koin_in_action) created to demonstrate [Koin](https://insert-koin.io/) dependency injection.  
 
  - **Kotlin** - as a programming language.
