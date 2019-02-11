@@ -33,7 +33,6 @@ dependencies {
 
     //Kotlin
     implementation kotlinLibraries.kotlin
-    implementation kotlinLibraries.coroutines
 
     //Support
     implementation supportLibraries.appCompat
@@ -45,8 +44,8 @@ dependencies {
     implementation archLibraries.lifecycle
     kapt archLibraries.lifecycleCompiler
 
-    //Room
-    implementation archLibraries.room
+    //Room + Coroutines
+    implementation archLibraries.roomCoroutines
     kapt archLibraries.roomCompiler
 
     testImplementation testLibraries.junit

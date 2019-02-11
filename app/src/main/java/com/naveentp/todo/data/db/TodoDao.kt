@@ -12,13 +12,13 @@ import androidx.room.*
 interface TodoDao {
 
     @Insert
-    fun saveTodo(todoRecord: TodoRecord)
+    suspend fun saveTodo(todoRecord: TodoRecord)
 
     @Delete
-    fun deleteTodo(todoRecord: TodoRecord)
+    suspend fun deleteTodo(todoRecord: TodoRecord)
 
     @Update
-    fun updateTodo(todoRecord: TodoRecord)
+    suspend fun updateTodo(todoRecord: TodoRecord)
 
     @Query("SELECT * FROM todo ORDER BY id DESC")
     fun getAllTodoList(): LiveData<List<TodoRecord>>
