@@ -8,7 +8,7 @@ ext {
     supportVersion = '1.0.0'
     materialVersion = '1.0.0-alpha1'
     lifecycleVersion = "2.0.0"
-    roomVersion = "2.0.0"
+    roomVersion = "2.1.0-alpha03"
     koinVersion = '1.0.0'
 
     // Testing
@@ -43,6 +43,7 @@ ext {
 
             room             : "androidx.room:room-runtime:${roomVersion}",
             roomCompiler     : "androidx.room:room-compiler:${roomVersion}",
+            roomCoroutines   : "androidx.room:room-coroutines:${roomVersion}"
     ]
 
     // Testing
