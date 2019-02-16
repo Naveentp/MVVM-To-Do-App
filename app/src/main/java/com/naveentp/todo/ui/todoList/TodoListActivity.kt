@@ -17,7 +17,7 @@ import com.naveentp.todo.ui.createTodo.CreateTodoActivity
 import com.naveentp.todo.utils.Constants
 import kotlinx.android.synthetic.main.activity_todo_list.*
 import kotlinx.android.synthetic.main.content_main.*
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.viewModel
 
 class TodoListActivity : AppCompatActivity(), TodoListAdapter.TodoEvents {
 

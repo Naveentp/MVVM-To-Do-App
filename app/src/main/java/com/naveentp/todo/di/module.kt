@@ -6,8 +6,8 @@ import com.naveentp.todo.data.repo.TodoRepo
 import com.naveentp.todo.data.repo.TodoRepoImpl
 import com.naveentp.todo.ui.todoList.TodoViewModel
 import org.koin.android.ext.koin.androidApplication
-import org.koin.android.viewmodel.ext.koin.viewModel
-import org.koin.dsl.module.module
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
 /**
  * @author Naveen T P
